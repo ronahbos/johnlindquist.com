@@ -15,14 +15,14 @@ Then, add the following to your keyboard shortcuts:
   "key": "cmd+shift+p",
   "command": "runInTerminal.run",
   "args": {
-    "cmd": "git add . && git commit -m \"`date`\" --allow-empty && git push",
+    "cmd": "git add -A && git commit -m \"`date`\" --allow-empty && git push",
     "match": ".*"
   }
 }
 ```
 
 - `&&` will wait for the previous command to finish before executing
-- `git add .` will add all files to be commited
+- `git add -A` will add all files to be commited, even when executed in a subfolder
 - `` git commit -m \"`date`\" --allow-empty `` will commit with the current date as a message even allowing commiting no changes (important if you're just creating a branch without changes)
 - `git push` pushes the branch
 
